@@ -18,6 +18,14 @@ namespace UniRx
 		public IntReactiveProperty(int initialValue) : base(initialValue) { }
 
 		public static implicit operator int(IntReactiveProperty property) => property.Value;
+		
+		public void Increment() => Value++;
+		
+		public void Decrement() => Value--;
+		
+		public void Add(int value) => Value += value;
+		
+		public void Subtract(int value) => Value -= value;
 	}
 
 	/// <summary>
@@ -30,6 +38,12 @@ namespace UniRx
 
 		public LongReactiveProperty(long initialValue) : base(initialValue) { }
 		public static implicit operator long(LongReactiveProperty property) => property.Value;
+		
+		public void Decrement() => Value--;
+		
+		public void Add(long value) => Value += value;
+		
+		public void Subtract(long value) => Value -= value;
 	}
 
 	/// <summary>
@@ -54,6 +68,13 @@ namespace UniRx
 
 		public FloatReactiveProperty(float initialValue) : base(initialValue) { }
 		public static implicit operator float(FloatReactiveProperty property) => property.Value;
+		
+		
+		public void Decrement() => Value--;
+		
+		public void Add(float value) => Value += value;
+		
+		public void Subtract(float value) => Value -= value;
 	}
 
 	/// <summary>
